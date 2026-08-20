@@ -19,6 +19,7 @@ app.include_router(account_router)
 
 @app.get("/")
 def root():
+
     return {
         "message": "FinGraph AI backend is running",
         "version": "0.1.0"
@@ -27,6 +28,7 @@ def root():
 
 @app.get("/health")
 def health_check():
+
     return {
         "status": "healthy"
     }

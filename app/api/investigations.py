@@ -18,3 +18,13 @@ def detect_circular_flows():
     return {
         "patterns_detected": fraud_service.detect_circular_flows()
     }
+
+
+@router.get("/velocity")
+def detect_velocity():
+
+    fraud_service = FraudService(graph_service.graph)
+
+    return {
+        "patterns_detected": fraud_service.detect_velocity()
+    }
